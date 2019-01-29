@@ -21,5 +21,8 @@ export default {
     FlatfairLogoHomeSvg,
     greenTickIcon
   },
+  mounted() {
+    this.$store.dispatch('getFixedMembershipInfo')
+  },
 }
 </script>
