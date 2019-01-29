@@ -77,6 +77,15 @@ export default {
 </script>
 
 <style lang='scss' scoped>
+#app {
+  background-image: linear-gradient(
+      rgb(255, 255, 255) 9%,
+      rgba(93, 173, 207, 0.51) 81%
+    ),
+    url('~@/assets/img/brunel-johnson-409075-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .footer {
   padding: 0 10px;
