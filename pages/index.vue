@@ -63,6 +63,34 @@ export default {
       this.formDuringSubmission = false
       this.$refs.form.resetValidation()
     },
+    submitFlatbondForm() {
+      if (this.$refs.form.validate()) {
+        this.formDuringSubmission = true
+        console.log('Form accepted ! Triggering FB function...')
+        let rentAmount = this.weekly ? this.weekly : this.monthly
+        let payload = {
+          weeklyOrMonthlyValue: parseInt(this.weeklyOrMonthlyValue),
+          postcodeValue: this.postcodeValue,
+          membershipFee: this.membershipFee
+        }
+
+        this.$store.dispatch('submitFlatbondForm', payload).then(result => {
+          console.log('result of the promise', result)
+          this.formDuringSubmission = false
+          if (result === true) {
+            this.clearForm()
+            this.errorInForm = false
+            this.formCreatedSuccesfully = true
+            this.snackbar = true
+            setTimeout(() => {
+              this.$router.push('/flatbondCreatedDetailsPage')
+            }, 3000)
+          } else {
+            this.errorInForm = true
+          }
+        })
+      }
+    }
   },
 }
 </script>
