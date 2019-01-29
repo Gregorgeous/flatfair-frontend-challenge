@@ -96,6 +96,38 @@ export default {
   justify-content: center;
   align-items: center;
   position: relative;
+  &__svg-logo {
+    &--knot,
+    &--flat,
+    &--fair,
+    &--bond {
+      height: 90%;
+    }
+    &--home {
+      order: 0;
+      width: 40px;
+      height: 28px;
+    }
+
+    &--knot {
+      order: 0;
+      margin-right: 5px;
+    }
+    &--fair,
+    &--bond {
+      order: 1;
+    }
+
+    &--flat,
+    &--fair {
+      margin-left: 2px;
+    }
+
+    &--bond {
+      margin-left: 3px;
+    }
+  }
+}
 @keyframes logo-rotate-disappear {
   0% {
     transform: rotateX(0);
