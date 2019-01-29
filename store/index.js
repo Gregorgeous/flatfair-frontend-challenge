@@ -63,4 +63,41 @@ export const actions = {
         commit('changeLoadingState', false)
       })
   },
+
+  submitFlatbondForm({ commit }, payload) {
+    console.log('Submitting flatbond form.This is my payload:')
+    console.log(payload)
+    commit('changeLoadingState', true)
+
+    let POSTPayload = {
+      rent_input: payload.weeklyOrMonthlyValue,
+      postcode: payload.postcodeValue
+    }
+    return this.$axios
+      .$post(
+        `https://cxynbjn3wf.execute-api.eu-west-2.amazonaws.com/production/flatbond`,
+        POSTPayload
+      )
+      .then(response => {
+        if (response && response.status === 'created') {
+          console.log("response status = 'created', POST request accepted.")
+          commit('changeLoadingState', false)
+          commit('setFlatbondCreatedState', true)
+          commit('setFlatbondDetails', payload)
+          console.log('Flatbond created ')
+          return true
+        } else {
+          console.log(
+            'Something went wrong with the expected response from the POST request. This is the response object'
+          )
+          console.log(response)
+          return false
+        }
+      })
+      .catch(err => {
+        console.log(`There was an error in reaching 1st GET: ${err}`)
+        commit('changeLoadingState', false)
+        return false
+      })
+  }
 }
