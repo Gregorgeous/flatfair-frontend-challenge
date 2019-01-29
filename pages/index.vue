@@ -102,6 +102,21 @@ export default {
     fixedMembershipFeeAmount() {
       return this.$store.state.fixedMembershipFeeAmount
     },
+    membershipFee() {
+      if (this.isMembershipFeeFixed === true) {
+        return this.fixedMembershipFeeAmount
+      }
+      const VAT = 0.2
+      if (
+        typeof this.weeklyOrMonthlyValue == 'string' ||
+        this.weeklyOrMonthlyValue < 2000
+      ) {
+        return 120 + 120 * VAT
+      } else {
+        let weekValue = this.weeklyOrMonthlyValue / 4
+        return weekValue + weekValue * VAT
+      }
+    }
   }
 }
 </script>
