@@ -113,6 +113,19 @@ export default {
       order: 0;
       margin-right: 5px;
     }
+
+    &--knot,
+    &--bond {
+      animation: logo-rotate-appear 1s ease both;
+      display: block;
+    }
+
+    &--home,
+    &--fair {
+      animation: logo-rotate-disappear 1s ease both;
+      animation-delay: 2s;
+      display: block;
+    }
     &--fair,
     &--bond {
       order: 1;
