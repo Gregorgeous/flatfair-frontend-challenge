@@ -1,5 +1,4 @@
 # flatfair_frontend_challenge
-
 > Nuxt/vue.js-based Flatbond platform interface prototype made as part of the recrutation frontend challenge  
 
 ## Build Setup
