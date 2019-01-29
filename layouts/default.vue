@@ -54,5 +54,38 @@ export default {
 </script>
 
 <style lang='scss' scoped>
+.mainNav {
+  display: flex;
+  align-items: center;
+  height: 60px;
+
+  &__toolbar {
+    width: 80%;
+    border-bottom-right-radius: 50px;
+    transform: translateY(-3px) !important;
+    z-index: 2;
+  }
+
+  &__home-icon,
+  &__home-icon.v-btn--active,
+  &__home-icon.v-btn:hover,
+  &__home-icon.v-btn:focus {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    padding: 0;
+    margin: 0;
+    height: inherit;
+    width: 70px;
+    z-index: 2;
+  }
+
+  &__home-icon::before {
+    left: 10px;
+    top: 9px;
+    height: 70%;
+    width: 70%;
+  }
+}
 </style>
 
