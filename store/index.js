@@ -18,6 +18,12 @@ export const mutations = {
   changeLoadingState(state, boolStatus) {
     state.loadingState = boolStatus
   },
+  setInfoAboutFixedMembershipFee(state, payload) {
+    state.fixedMembershipFee = payload.fixed_membership_fee
+    if (payload.fixed_membership_fee) {
+      state.fixedMembershipFeeAmount = payload.fixed_membership_fee_amount
+    }
+  }
 }
 
 export const actions = {}
