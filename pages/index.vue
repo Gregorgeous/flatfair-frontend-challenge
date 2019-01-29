@@ -44,5 +44,17 @@ export default {
       snackbar: false
     }
   },
+  methods: {
+    chooseBoxBtnClicked(target) {
+      if (target == 'weekly' && this.weekly) {
+        return
+      } else if (target == 'monthly' && this.monthly) {
+        return
+      }
+      this.weeklyOrMonthlyValue = null
+      this.monthly = !this.monthly
+      this.weekly = !this.weekly
+    },
+  },
 }
 </script>
