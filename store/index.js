@@ -26,4 +26,22 @@ export const mutations = {
   }
 }
 
-export const actions = {}
+export const actions = {
+  getFixedMembershipInfo({ commit }) {
+    commit('changeLoadingState', true)
+    this.$axios
+      .$get(
+        `https://cxynbjn3wf.execute-api.eu-west-2.amazonaws.com/production/config`
+      )
+      .then(response => {
+        console.log('this is the response I got from the GET request:')
+        console.log(response)
+        commit('setInfoAboutFixedMembershipFee', response)
+        commit('changeLoadingState', false)
+      })
+      .catch(err => {
+        console.log(`There was an error in reaching the GET: ${err}`)
+        commit('changeLoadingState', false)
+      })
+  },
+}
