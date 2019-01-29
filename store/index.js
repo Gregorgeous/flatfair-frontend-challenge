@@ -10,7 +10,8 @@ export const state = () => ({
     membershipFee: 120
   },
   fixedMembershipFee: false,
-  fixedMembershipFeeAmount: null
+  fixedMembershipFeeAmount: null,
+  loadingState: false
 })
 
 export const mutations = {}
