@@ -92,5 +92,16 @@ export default {
       }
     }
   },
+  computed: {
+    isLoading() {
+      return this.$store.state.loadingState
+    },
+    isMembershipFeeFixed() {
+      return this.$store.state.fixedMembershipFee
+    },
+    fixedMembershipFeeAmount() {
+      return this.$store.state.fixedMembershipFeeAmount
+    },
+  }
 }
 </script>
