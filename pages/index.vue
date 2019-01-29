@@ -55,6 +55,14 @@ export default {
       this.monthly = !this.monthly
       this.weekly = !this.weekly
     },
+    clearForm() {
+      this.weeklyOrMonthlyValue = null
+      this.postcodeValue = null
+      this.valid = true
+      this.errorInForm = false
+      this.formDuringSubmission = false
+      this.$refs.form.resetValidation()
+    },
   },
 }
 </script>
