@@ -146,6 +146,13 @@ export default {
       animation-delay: 2s;
       display: block;
     }
+
+    &--flat {
+      order: 1;
+      // NOTE: see the animation definition for more info
+      animation: counter-react-to-snap-issue 1s 3s ease forwards;
+    }
+
     &--fair,
     &--bond {
       order: 1;
