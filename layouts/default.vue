@@ -9,7 +9,20 @@
 </template>
 
 <script>
+import BONDSvg from '@/components/websiteLogoParts/BOND-word-svg'
+import FAIRSvg from '@/components/websiteLogoParts/FAIR-word-svg'
+import FLATSvg from '@/components/websiteLogoParts/FLAT-word-svg'
+import FlatfairLogoHomeSvg from '@/components/websiteLogoParts/Flatfair-Logo-Home-svg'
+import KnotLogoSvg from '@/components/websiteLogoParts/Knot-logo-svg'
+
 export default {
+  components: {
+    BONDSvg,
+    FAIRSvg,
+    FLATSvg,
+    FlatfairLogoHomeSvg,
+    KnotLogoSvg
+  },
   data() {
     return {}
   },
