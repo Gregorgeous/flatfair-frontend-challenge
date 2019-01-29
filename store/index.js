@@ -18,6 +18,9 @@ export const mutations = {
   changeLoadingState(state, boolStatus) {
     state.loadingState = boolStatus
   },
+  setFlatbondCreatedState(state, payload) {
+    state.isFlatbondCreated = payload
+  },
   setInfoAboutFixedMembershipFee(state, payload) {
     state.fixedMembershipFee = payload.fixed_membership_fee
     if (payload.fixed_membership_fee) {
