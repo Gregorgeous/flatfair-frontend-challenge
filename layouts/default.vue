@@ -1,4 +1,5 @@
 <template>
+	<v-app light>
 		<v-content id='main-background-window'>
 			<v-container>
 				<nuxt />
