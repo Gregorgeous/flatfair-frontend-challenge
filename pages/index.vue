@@ -9,6 +9,19 @@
 
 			</div>
 		</v-flex>
+		<v-snackbar v-model="snackbar"
+		 multi-line
+		 bottom
+		 :timeout="5000">
+			<p class='title'>
+				Submitted! Await redirection...
+			</p>
+			<v-btn color="secondary"
+			 flat
+			 @click="snackbar = false">
+				Close
+			</v-btn>
+		</v-snackbar>
 	</v-layout>
 </template>
 
