@@ -96,6 +96,27 @@ export default {
   justify-content: center;
   align-items: center;
   position: relative;
+@keyframes logo-rotate-disappear {
+  0% {
+    transform: rotateX(0);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotateX(90deg);
+  }
+}
+
+@keyframes logo-rotate-appear {
+  0% {
+    opacity: 0;
+    transform: rotateX(-90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+}
 }
 </style>
 
