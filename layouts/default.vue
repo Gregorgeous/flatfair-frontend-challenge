@@ -212,6 +212,11 @@ export default {
     margin-right: -2px;
   }
 }
+
+#main-background-window {
+  padding: 0px 0px 32px !important;
+}
+
 }
 </style>
 
