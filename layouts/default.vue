@@ -25,6 +25,9 @@
 				<nuxt />
 			</v-container>
 		</v-content>
+		<v-footer app
+		 class='footer'>
+			<a class='caption'> &copy; Flatfair 2019</a>
 		</v-footer>
 	</v-app>
 </template>
