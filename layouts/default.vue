@@ -141,6 +141,11 @@ export default {
     }
   }
 }
+
+.hidden {
+  display: none;
+}
+
 @keyframes logo-rotate-disappear {
   0% {
     transform: rotateX(0);
