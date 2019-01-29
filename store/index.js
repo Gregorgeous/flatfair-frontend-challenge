@@ -21,6 +21,22 @@ export const mutations = {
   setFlatbondCreatedState(state, payload) {
     state.isFlatbondCreated = payload
   },
+  setFlatbondDetails(state, payload) {
+    console.log('im in setFlatbondDetails')
+    console.log("that's payload", payload)
+
+    if (payload.weeklyOrMonthlyValue > 120) {
+      state.flatbondDetails.whichRentArrangementChosen = 'monthly'
+      state.flatbondDetails.monthlyRentAmount = payload.weeklyOrMonthlyValue
+      state.flatbondDetails.weeklyRentAmount = payload.weeklyOrMonthlyValue / 4
+    } else {
+      state.flatbondDetails.whichRentArrangementChosen = 'weekly'
+      state.flatbondDetails.weeklyRentAmount = payload.weeklyOrMonthlyValue
+      state.flatbondDetails.monthlyRentAmount = payload.weeklyOrMonthlyValue * 4
+    }
+    state.flatbondDetails.postcode = payload.postcodeValue
+    state.flatbondDetails.membershipFee = payload.membershipFee
+  },
   setInfoAboutFixedMembershipFee(state, payload) {
     state.fixedMembershipFee = payload.fixed_membership_fee
     if (payload.fixed_membership_fee) {
