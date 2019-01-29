@@ -77,6 +77,11 @@ export default {
 </script>
 
 <style lang='scss' scoped>
+
+.footer {
+  padding: 0 10px;
+}
+
 .mainNav {
   display: flex;
   align-items: center;
