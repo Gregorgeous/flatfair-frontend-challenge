@@ -217,6 +217,9 @@ export default {
   padding: 0px 0px 32px !important;
 }
 
+.container {
+  min-height: calc(100vh - 95px);
+  padding: 0 25px 25px 25px;
 }
 </style>
 
