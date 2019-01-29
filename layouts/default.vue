@@ -87,5 +87,15 @@ export default {
     width: 70%;
   }
 }
+
+.website-title {
+  // IDEA: here in width I account for the curve of the navbar
+  width: calc(100% - 65px);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
 </style>
 
