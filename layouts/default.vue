@@ -187,6 +187,16 @@ export default {
     transform: rotateX(0deg);
   }
 }
+
+// IDEA: If you look closely enough, there's a small 'snap' in the positioning of the 'flat' word when the word 'bond' appears. This quick fix tries to 'minimize damages'. In real-world I would definitely try to find the root of the problem but for the challenge's time constraints I'll leave it being.
+@keyframes counter-react-to-snap-issue {
+  0% {
+    margin-right: 0px;
+  }
+  100% {
+    margin-right: -2px;
+  }
+}
 }
 </style>
 
