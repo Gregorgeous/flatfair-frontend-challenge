@@ -49,7 +49,27 @@ export default {
   },
   methods: {},
   computed: {},
-  mounted() {}
+  mounted() {
+    swapLogosWhileRotating()
+
+    // IDEA: I'm using js and a timeout to kinda manually 'swap' the home and knot logos when they rotate. A css-only alternative to that would be making knot 'absolute' positioned (now both logos are pos:relative) and just change opacity, but that introduces a problems aligning both perfectly on eachother on multiple viewport sizes (which can be 'kinda' solved with just many media queries I think this solution is more concise). This is one of the motives for the recently appearing js-in-css tools... ;)
+    function swapLogosWhileRotating() {
+      let home = document.querySelector('.website-title__svg-logo--home')
+      let knot = document.querySelector('.website-title__svg-logo--knot')
+      let fair = document.querySelector('.website-title__svg-logo--fair')
+      let bond = document.querySelector('.website-title__svg-logo--bond')
+
+      let animDelay = 2000
+      let animDuration = 1000
+
+      setTimeout(() => {
+        home.classList.add('hidden')
+        fair.classList.add('hidden')
+        knot.classList.remove('hidden')
+        bond.classList.remove('hidden')
+      }, animDuration * 0.1 + animDelay)
+    }
+  }
 }
 </script>
 
