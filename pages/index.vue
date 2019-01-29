@@ -13,5 +13,13 @@
 </template>
 
 <script>
-export default {}
+import FlatfairLogoHomeSvg from '@/components/websiteLogoParts/Flatfair-Logo-Home-svg'
+import greenTickIcon from '@/components/other-svgs/green-tick-icon.svg'
+
+export default {
+  components: {
+    FlatfairLogoHomeSvg,
+    greenTickIcon
+  },
+}
 </script>
