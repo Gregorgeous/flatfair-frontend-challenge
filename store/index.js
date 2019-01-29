@@ -22,9 +22,6 @@ export const mutations = {
     state.isFlatbondCreated = payload
   },
   setFlatbondDetails(state, payload) {
-    console.log('im in setFlatbondDetails')
-    console.log("that's payload", payload)
-
     if (payload.weeklyOrMonthlyValue > 120) {
       state.flatbondDetails.whichRentArrangementChosen = 'monthly'
       state.flatbondDetails.monthlyRentAmount = payload.weeklyOrMonthlyValue
