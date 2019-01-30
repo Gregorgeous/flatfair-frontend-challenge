@@ -397,6 +397,36 @@ $successfulFormColor: #9fffe7;
   color: $secondaryThemeColor;
 }
 
+// A change of styling once the form was correctly submitted
+.form-successful {
+  // This one is for the main form shape
+  border-color: $successfulFormColor;
+  border-width: 5px;
+
+  // This one for the tricky submit btn.
+  &-2#submitBtn--valid,
+  &-2#submitBtn--disabled {
+    color: $mainThemeColor;
+    background-color: $successfulFormColor !important;
+    border: 5px solid $successfulFormColor !important;
+  }
+  // This one is for the circle shape with the logo
+  &-3 {
+    animation: rotate-on-form-successful 1s ease-out forwards;
+    border-color: $successfulFormColor;
+  }
+  // This one is for the flatfair logo and the h1 text with it.
+  // IDEA: well ... this bit won't work as 'spectacularly' as I intended because there's a v-if directive on both the logo and h1 preventing it to happen. Hovewer, should we change the v-if to just zero-ing the opacity via css, the tick will appear squished as all 3 are in the same flexbox. The workaround would be relying on computed property in the v-if that would 'fire up' the boolean with a delay ... but I hope the current anim look is enough :)
+  &-4 {
+    animation: hide-on-form-successful 1s ease forwards;
+  }
+  // This one is for the gren  tick svg
+  &-5 {
+    animation: show-on-form-successful 0.5s 0.5s ease-out forwards;
+    opacity: 0;
+  }
+}
+// See the IDEA: above for more info.
 @keyframes hide-on-form-successful {
   0% {
     opacity: 1;
@@ -426,3 +456,5 @@ $successfulFormColor: #9fffe7;
   }
 }
 </style>
+
+
