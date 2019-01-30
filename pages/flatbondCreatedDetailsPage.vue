@@ -306,6 +306,26 @@ $secondaryOpaqueThemeColor: rgba(103, 133, 255, 0.725);
     flex-direction: column;
   }
 }
+
+.twitter {
+  &_card--text {
+    > a {
+      color: white;
+    }
+  }
+
+  &-logo-svg {
+    margin: 0 5px;
+    width: 40px;
+  }
+
+  &-heart-svg,
+  &-share-svg {
+    margin: 5px;
+    width: 25px;
+  }
+}
+
 </style>
 
 
