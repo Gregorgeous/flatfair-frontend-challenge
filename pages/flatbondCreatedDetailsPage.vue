@@ -7,7 +7,20 @@
 </template>
 
 <script>
+import KnotLogoSvg from '@/components/websiteLogoParts/Knot-logo-svg'
+import twitterHeartSvg from '@/components/other-svgs/heart-solid.svg'
+import twitterShareSvg from '@/components/other-svgs/share-alt-solid.svg'
+import twitterLogoSvg from '@/components/other-svgs/twitter-brands.svg'
+import backgroundShape from '@/components/other-svgs/background--page-2.svg'
+
 export default {
+  components: {
+    KnotLogoSvg,
+    twitterHeartSvg,
+    twitterShareSvg,
+    twitterLogoSvg,
+    backgroundShape
+  },
   data() {
     return {}
   },
