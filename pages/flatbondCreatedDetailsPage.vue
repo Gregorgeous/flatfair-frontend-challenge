@@ -78,6 +78,39 @@
 			</v-flex>
 		</v-layout>
 
+		<!-- ============ ROW 2 ============== -->
+
+		<v-layout class='row-2 mt-5'>
+			<v-flex xs5>
+				<v-card color="cyan"
+				 class="white--text ">
+					<v-card-title class='row-2__v-card-title text-xs-center'
+					 primary-title>
+						<v-layout row
+						 class='mb-2'>
+							<v-icon dark
+							 x-large>
+								location_on
+							</v-icon>
+						</v-layout>
+						<v-layout row
+						 class='text-xs-center'>
+							<h3>
+								Your postcode
+							</h3>
+						</v-layout>
+						<v-layout></v-layout>
+					</v-card-title>
+					<v-divider></v-divider>
+					<v-card-text class='text-xs-center'>
+						<h3>
+							{{flatbondDetails.postcode}}
+						</h3>
+					</v-card-text>
+				</v-card>
+			</v-flex>
+		</v-layout>
+
 		<v-snackbar v-model="snackbar"
 		 multi-line
 		 bottom
