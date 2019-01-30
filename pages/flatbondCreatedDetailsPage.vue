@@ -48,6 +48,15 @@ export default {
         return this.flatbondDetails.monthlyRentAmount
       }
     },
+    flexAlignOfTwitterTitle() {
+      const binding = {}
+
+      if (this.$vuetify.breakpoint.xs) {
+        binding.column = true
+        binding.alignContentCenter = true
+      }
+      return binding
+    }
   }
 }
 </script>
