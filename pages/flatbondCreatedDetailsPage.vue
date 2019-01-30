@@ -326,6 +326,16 @@ $secondaryOpaqueThemeColor: rgba(103, 133, 255, 0.725);
   }
 }
 
+@media only screen and (max-width: 630px) {
+  .layout.row-3 {
+    .v-card__title {
+      flex-direction: column;
+      > *:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
 </style>
 
 
