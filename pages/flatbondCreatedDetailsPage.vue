@@ -297,6 +297,15 @@ $secondaryOpaqueThemeColor: rgba(103, 133, 255, 0.725);
     }
   }
 }
+
+.row {
+  &-1__v-card-title,
+  &-2__v-card-title {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
 </style>
 
 
