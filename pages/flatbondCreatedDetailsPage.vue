@@ -111,6 +111,54 @@
 			</v-flex>
 		</v-layout>
 
+		<!-- ============ ROW 3 (Twitter card prototype)  ============== -->
+
+		<v-layout class='row-3 mt-5'>
+			<v-flex xs11>
+				<v-card color="#26c6da"
+				 class="white--text ">
+					<v-card-title v-bind="flexAlignOfTwitterTitle">
+						<twitterLogoSvg class="twitter-logo-svg"></twitterLogoSvg>
+						<span class="ml-2 title font-weight-light">How about sharing the news on twitter ? ;) </span>
+						<v-spacer class="hidden-sm-only"></v-spacer>
+						<v-btn large
+						 @click="snackbar = true"
+						 class="elevation-4">Share on twitter !</v-btn>
+					</v-card-title>
+					<v-divider></v-divider>
+					<v-card-text class="twitter_card--text headline font-weight-bold">
+						I've just created my flatbond at
+						<a href="https://flatfair.co.uk/">Flatfair</a>. Let's see how it goes ! :)
+					</v-card-text>
+
+					<v-card-actions>
+						<v-list-tile class="grow">
+							<v-list-tile-avatar color="grey darken-3">
+								<!-- IDEA: in real-world for this src I'd rather make download it image, change it to webp optimised format and let webpack process(/compress) it. But for simplicity sake I directly linked the image -->
+								<v-img class="elevation-6"
+								 src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"></v-img>
+							</v-list-tile-avatar>
+
+							<v-list-tile-content>
+								<v-list-tile-title>Your name</v-list-tile-title>
+							</v-list-tile-content>
+
+							<v-layout align-center
+							 justify-end>
+								<twitterHeartSvg class='twitter-heart-svg'></twitterHeartSvg>
+								<!-- <v-icon class="mr-1">mdi-heart</v-icon> -->
+								<span class="subheading mr-2">256</span>
+								<span class="mr-1">·</span>
+								<twitterShareSvg class="twitter-share-svg"></twitterShareSvg>
+								<!-- <v-icon class="mr-1">mdi-share-variant</v-icon> -->
+								<span class="subheading">45</span>
+							</v-layout>
+						</v-list-tile>
+					</v-card-actions>
+				</v-card>
+			</v-flex>
+		</v-layout>
+
 		<v-snackbar v-model="snackbar"
 		 multi-line
 		 bottom
