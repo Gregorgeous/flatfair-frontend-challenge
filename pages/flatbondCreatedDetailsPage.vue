@@ -17,6 +17,67 @@
 			</v-layout>
 		</div>
 
+		<!-- ============ ROW 1 ============== -->
+		<v-layout class='row-1 mt-5'>
+			<v-flex xs5>
+				<v-card color="blue"
+				 class="white--text ">
+					<v-card-title class='row-1__v-card-title text-xs-center'
+					 primary-title>
+						<v-layout row
+						 class='mb-2'>
+							<v-icon dark
+							 x-large>
+								attach_money
+							</v-icon>
+						</v-layout>
+						<v-layout row
+						 class='text-xs-center'>
+							<h3>
+								Your {{displayWeeklyOrMonthlyLabel}} rent cost is:
+							</h3>
+						</v-layout>
+						<v-layout></v-layout>
+					</v-card-title>
+					<v-divider></v-divider>
+					<v-card-text class='text-xs-center'>
+						<h3>
+							£ {{displayWeeklyOrMonthlyValue}}
+						</h3>
+					</v-card-text>
+				</v-card>
+			</v-flex>
+			<v-flex offset-xs1
+			 xs5>
+				<v-card color="light-blue accent-2"
+				 class="white--text ">
+					<v-card-title class='row-1__v-card-title text-xs-center'
+					 primary-title>
+						<v-layout row
+						 class='mb-2'>
+							<v-icon dark
+							 x-large>
+								attach_money
+							</v-icon>
+						</v-layout>
+						<v-layout row
+						 class='text-xs-center'>
+							<h3>
+								One-off membership fee:
+							</h3>
+						</v-layout>
+						<v-layout></v-layout>
+					</v-card-title>
+					<v-divider></v-divider>
+					<v-card-text class='text-xs-center'>
+						<h3>
+							£ {{flatbondDetails.membershipFee}}
+						</h3>
+					</v-card-text>
+				</v-card>
+			</v-flex>
+		</v-layout>
+
 		<v-snackbar v-model="snackbar"
 		 multi-line
 		 bottom
