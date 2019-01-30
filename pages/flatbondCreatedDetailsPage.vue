@@ -159,6 +159,38 @@
 			</v-flex>
 		</v-layout>
 
+		<!-- ============ ROW 4 (Navigation button) ============== -->
+
+		<v-layout justify-center
+		 class='row-4 my-2'>
+			<v-speed-dial top
+			 transition='slide-y-reverse-transition'>
+				<v-btn slot="activator"
+				 color="grey darken-3"
+				 round
+				 large
+				 dark>
+					<h2>Looks good ?</h2>
+				</v-btn>
+				<v-btn dark
+				 round
+				 to="/"
+				 color="green">
+					<span>
+						All is fine, cheers!
+					</span>
+				</v-btn>
+				<v-btn dark
+				 round
+				 href="https://support.flatfair.co.uk/"
+				 color="red">
+					<span>
+						Need some help!
+					</span>
+				</v-btn>
+			</v-speed-dial>
+		</v-layout>
+
 		<v-snackbar v-model="snackbar"
 		 multi-line
 		 bottom
