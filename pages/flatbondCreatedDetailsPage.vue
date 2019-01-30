@@ -271,6 +271,32 @@ $mainThemeColor: #05103371;
 $secondaryThemeColor: #6785ff;
 $secondaryOpaqueThemeColor: rgba(103, 133, 255, 0.725);
 
+.topbar {
+  &__bkg-shape {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: -62px;
+    transform: scaleY(1.1) scaleX(1.02);
+    opacity: 0.3;
+  }
+
+  &__row-1 {
+    margin: 20px 0px;
+    &--flex {
+      display: flex;
+    }
+    &--knot-logo {
+      height: 100%;
+      width: 100%;
+      margin-right: 10px;
+    }
+
+    &--heading {
+      text-align: center;
+    }
+  }
+}
 </style>
 
 
