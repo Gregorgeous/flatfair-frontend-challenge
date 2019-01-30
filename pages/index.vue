@@ -221,3 +221,12 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+$mainThemeColor: #05103371;
+$secondaryThemeColor: #6785ff;
+$secondaryOpaqueThemeColor: #6785ffb9;
+$successfulFormColor: #9fffe7;
+
+}
+</style>
