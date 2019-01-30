@@ -2,10 +2,6 @@
 	<v-layout column
 	 justify-center
 	 align-center>
-		<v-flex xs12
-		 sm8
-		 md6>
-			<div class="text-xs-center">
 		<v-form ref="form"
 		 class="flatbond-form"
 		 :class="formCreatedSuccesfully?'form-successful':''"
@@ -98,7 +94,6 @@
 				 :loading="isLoading"
 				 dark>Submit</v-btn>
 			</div>
-		</v-flex>
 
 		</v-form>
 
