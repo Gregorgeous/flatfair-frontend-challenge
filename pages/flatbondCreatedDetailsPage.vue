@@ -4,6 +4,20 @@
 	 align-center>
 
 	</v-layout>
+		<v-snackbar v-model="snackbar"
+		 multi-line
+		 bottom
+		 :timeout="5000">
+			<p class='title'>
+				Let's meet in person and discuss that feature... ;)
+
+			</p>
+			<v-btn color="secondary"
+			 flat
+			 @click="snackbar = false">
+				Close
+			</v-btn>
+		</v-snackbar>
 </template>
 
 <script>
