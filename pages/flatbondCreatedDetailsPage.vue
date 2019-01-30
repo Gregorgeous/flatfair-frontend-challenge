@@ -267,6 +267,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$mainThemeColor: #05103371;
+$secondaryThemeColor: #6785ff;
+$secondaryOpaqueThemeColor: rgba(103, 133, 255, 0.725);
+
 </style>
 
 
