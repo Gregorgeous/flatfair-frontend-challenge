@@ -75,3 +75,5 @@ making the website in the mobile-first approach.
 - Speaking of the images - handle the proper ":srcset" (in template)/@media queries (in css) so that we don't load those big-sized image on all the viewports but rather a smaller one for smaller devices. Also remove the 'directly linked' image on the twitter card and add a proper .webp image for it.   
 - I could change the favicon to your flatfair logo home just as you do on your homepage ;) .
 - I could've used the Repo's WIKI section instead of making this huge README but this way you have it all laid out at forefront without too much navigating around. 
+  
+- Oh, also, there's a small console warning about the "tapable.js being deprecated" during the 'npm run dev' which is promised by Alex Lichter from Nuxt team to be tackled in the next update on this thread https://github.com/nuxt-community/pwa-module/issues/120. The Nuxt v.2.4.0 update happened to be rolled-out yesterday so there's another potential thing to do to check if that's indeed the case ;)   
