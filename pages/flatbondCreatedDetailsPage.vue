@@ -41,6 +41,13 @@ export default {
     displayWeeklyOrMonthlyLabel() {
       return this.flatbondDetails.whichRentArrangementChosen
     },
+    displayWeeklyOrMonthlyValue() {
+      if (this.flatbondDetails.whichRentArrangementChosen === 'weekly') {
+        return this.flatbondDetails.weeklyRentAmount
+      } else {
+        return this.flatbondDetails.monthlyRentAmount
+      }
+    },
   }
 }
 </script>
