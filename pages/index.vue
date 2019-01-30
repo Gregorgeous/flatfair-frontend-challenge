@@ -228,5 +228,169 @@ $secondaryThemeColor: #6785ff;
 $secondaryOpaqueThemeColor: #6785ffb9;
 $successfulFormColor: #9fffe7;
 
+.flatbond-form {
+  background: #fff;
+  border: 1px solid #6785ff;
+  border-radius: 16px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 90px;
+  padding: 0px 28px;
+  position: relative;
+  margin-bottom: 20px;
+  transition: border 0.4s ease;
+
+  &__circle {
+    align-self: center;
+    transform: translateY(-72px);
+    width: 144px;
+    height: 144px;
+    background: #fff;
+    border-radius: 50%;
+    border: 7px solid #6785ff;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: border 0.4s ease;
+
+    h1 {
+      text-align: center;
+      font-size: 1.3em;
+      font-family: 'Arial Rounded MT';
+      font-weight: bold;
+      font-size: 17px;
+      text-align: center;
+      color: #051033;
+    }
+
+    &--logo-svg {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  &__rent-arrangement {
+    margin-top: -50px;
+  }
+  &__choose-box {
+    align-self: center;
+    width: 95%;
+    height: 43px;
+    border-radius: 12px;
+    background: #fdfdfd;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16);
+    display: grid;
+    grid-template-columns: 1fr 5px 1fr;
+
+    &--weekly {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      opacity: 0.2;
+      transition: opacity 0.5s ease;
+    }
+
+    &--divider {
+      align-self: center;
+      width: 100%;
+      width: 0px;
+      height: 35px;
+      background: transparent;
+      border: 1px solid #d1d1d1;
+    }
+
+    &--monthly {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      opacity: 0.2;
+      transition: opacity 0.5s ease;
+    }
+
+    &--weekly:hover,
+    &--monthly:hover {
+      opacity: 1;
+    }
+
+    .clicked {
+      opacity: 1;
+    }
+    // IDEA: funily enough, although the 'un-clicked' seems explicitly verbose, it actually prevents the situation of both btns seeming to be 'active' which happens with just relying on opacity in the original class definition.
+    .un-clicked {
+      opacity: 0.2;
+    }
+  }
+
+  &__input--weekly-arrangement,
+  &__input--monthly-arrangement {
+    width: 100%;
+    margin-top: 25px;
+  }
+  & .v-icon {
+    align-self: center;
+    transform: scale(1.6);
+  }
+
+  &__membership--heading,
+  &__postcode--heading {
+    margin-top: 20px;
+  }
+  &__input--membership-fee,
+  &__input--postcode {
+    margin-top: 0;
+    width: 100%;
+    // background-color: #6785ff50;
+  }
+
+  &__input--membership-fee {
+    opacity: 0.8;
+    input {
+      color: white;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    transform: translateY(25px);
+    margin-top: -15px;
+    width: 92%;
+    justify-content: space-between;
+
+    &--submit-btn {
+      width: 40%;
+      transform: scale(1.3);
+      opacity: 1;
+
+      // IDEA: The below are rather dirty hacks to force vuetify's UI components to have different styling. If you're quite unhappy as much as I am with the amount of "!important"s I would probably change to a different UI lib (sadly, Vuetify is stubborn to customise outside of the fancy directives and directly inside CSS) or write it from scratch
+      color: #ffffff94 !important;
+      transition: border 0.4s ease, color 0.4s ease;
+
+      &.v-btn.v-btn--disabled {
+        color: #ffffff94 !important;
+        pointer-events: all;
+        cursor: not-allowed;
+      }
+    }
+
+    #submitBtn--disabled {
+      background-color: #9e9797 !important;
+    }
+
+    #submitBtn--valid {
+      background-color: $secondaryThemeColor !important;
+      color: white !important;
+    }
+  }
+}
 }
 </style>
