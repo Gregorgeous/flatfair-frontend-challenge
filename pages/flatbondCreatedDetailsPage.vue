@@ -336,6 +336,56 @@ $secondaryOpaqueThemeColor: rgba(103, 133, 255, 0.725);
     }
   }
 }
+
+@media only screen and (min-width: 300px) {
+  .topbar {
+    margin-bottom: 30%;
+    &__bkg-shape {
+      top: -80px;
+      transform: scaleY(1.4) scaleX(1.02);
+    }
+  }
+}
+
+@media only screen and (min-width: 460px) {
+  .topbar {
+    margin-bottom: 30%;
+    &__bkg-shape {
+      top: -80px;
+      transform: scaleY(0.9) scaleX(1.02);
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .topbar {
+    margin-bottom: 20%;
+    &__bkg-shape {
+      top: -140px;
+      transform: scaleY(0.7) scaleX(1.02);
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .topbar {
+    margin-bottom: 150px;
+    &__bkg-shape {
+      top: -280px;
+      transform: scaleY(0.5) scaleX(1.02);
+    }
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .topbar {
+    margin-bottom: 150px;
+    &__bkg-shape {
+      top: -370px;
+      transform: scaleY(0.4) scaleX(1.02);
+    }
+  }
+}
 </style>
 
 
