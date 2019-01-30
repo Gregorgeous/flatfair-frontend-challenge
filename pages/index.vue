@@ -392,5 +392,10 @@ $successfulFormColor: #9fffe7;
     }
   }
 }
+
+#trashIcon {
+  color: $secondaryThemeColor;
+}
+
 }
 </style>
