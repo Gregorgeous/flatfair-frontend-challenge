@@ -22,7 +22,9 @@ export default {
     backgroundShape
   },
   data() {
-    return {}
+    return {
+      snackbar: false
+    }
   },
   methods: {},
   computed: {
