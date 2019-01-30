@@ -1,5 +1,21 @@
 <template>
 	<div class='main-container'>
+		<div class="topbar">
+			<backgroundShape class='topbar__bkg-shape'></backgroundShape>
+			<v-layout class="topbar__row-1">
+				<v-flex xs3
+				 class='topbar__row-1--flex'>
+					<KnotLogoSvg class='topbar__row-1--knot-logo'></KnotLogoSvg>
+				</v-flex>
+				<v-flex xs9
+				 class='topbar__row-1--heading'>
+					<h1>Flatbond created !</h1>
+				</v-flex>
+			</v-layout>
+			<v-layout class="topbar__row-2">
+				<h2 class='title font-italic'>Here's your rundown:</h2>
+			</v-layout>
+		</div>
 
 		<v-snackbar v-model="snackbar"
 		 multi-line
