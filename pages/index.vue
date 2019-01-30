@@ -397,5 +397,32 @@ $successfulFormColor: #9fffe7;
   color: $secondaryThemeColor;
 }
 
+@keyframes hide-on-form-successful {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes show-on-form-successful {
+  0% {
+    opacity: 0;
+    transform: rotateX(-90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(-180deg);
+  }
+}
+
+@keyframes rotate-on-form-successful {
+  0% {
+    transform: translateY(-72px) rotateX(0);
+  }
+  100% {
+    transform: translateY(-72px) rotateX(180deg);
+  }
 }
 </style>
