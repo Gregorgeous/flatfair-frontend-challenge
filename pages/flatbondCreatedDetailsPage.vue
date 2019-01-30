@@ -1,9 +1,6 @@
 <template>
-	<v-layout column
-	 justify-center
-	 align-center>
+	<div class='main-container'>
 
-	</v-layout>
 		<v-snackbar v-model="snackbar"
 		 multi-line
 		 bottom
@@ -18,6 +15,8 @@
 				Close
 			</v-btn>
 		</v-snackbar>
+
+	</div>
 </template>
 
 <script>
